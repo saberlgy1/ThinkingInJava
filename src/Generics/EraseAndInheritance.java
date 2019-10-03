@@ -21,7 +21,8 @@ class GenericBase<T>{
 
 class Derived<T> extends GenericBase{}
 
-class Derived2 extends GenericBase{};
+class Derived2 extends GenericBase{
+};
 
 class Derived3 extends GenericBase{};
 
@@ -31,6 +32,7 @@ public class EraseAndInheritance {
         Derived2 d = new Derived2();
         Object o = d.getE();
         d.set(o);
+        System.out.println(d.getE().getClass());
     }
 
 }
